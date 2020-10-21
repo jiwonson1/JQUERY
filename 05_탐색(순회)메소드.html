@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap, .wrap *{
+            border:1px solid lightgray;
+            display:block;
+            margin:15px;
+            padding:5px;
+            color:gray;
+        }
+    </style>
+    <script src="resources/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h1>순회(탐색) 메소드</h1>
+
+    <h3>
+        * Anscestors(조상) 메소드 : 선택된요소의 상위요소들을 선택할 수 있는 메소드
+    </h3>
+
+    <div class="wrap">
+        <div>div(증조할머니)
+            <ul>ul(할머니)
+                <li>li(엄마)
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+        <div> div (할아버지)
+            <p> p (아빠)
+                <span>span</span>
+            </p>
+        </div>
+    </div>
+
+    <p>
+        <b>- $("선택자").parent()</b><br>
+        선택된 요소의 바로위 상위(부모)요소 하나만을 선택<br><br>
+
+        <b>- $("선택자").parents()</b><br>
+        선택된 요소의 모든 상위요소를 다 선택<br><br>
+
+        <b>- $("선택자").parents("선택자")</b>
+        선택된 요소의 모든 상위요소들 중 전달값과 일치하는 상위요소들만 선택<br><br>
+
+        <b>- $("선택자").parentsUntil("선택자")</b><br>
+        선택된 요소부터 "전달된까지의"
+
+        <br> </br>
+    </p>
+
+    <script>
+        $(function(){
+            // parent()
+            $("span").parent().css({"color":"red", "border":"2px solid red"})
+
+        })
+            // parents()
+            $("li").parents().css("color","blue")
+
+            // parents("선택자")
+            $("")
+            
+            // parentsUntil
+            $("").parentsUntil().css("backgroundColor","lightgreen").css("color","pink");
+    </script>
+</body>
+</html>

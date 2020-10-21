@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="resources/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h3>* fadeIn()과 fadeOut()</h3>
+
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeToggle">fadeToggle</button>
+    <br>
+    
+    <img id="forest" src="resources/images/forest1.PNG" alt="">
+
+    <script>
+        $(function() {
+            $("#fadeOut").click(function(){
+                $("#forest").fadeOut(2000);
+            });
+
+            $("#fadeIn").click(function(){
+                $("#forest").fadeIn(2000);
+            });
+
+            $("#fadeToggle").click(function(){
+                $("#forest").fadeToggle(1000);
+            })
+        });
+
+    </script>
+
+
+
+</body>
+</html>
